@@ -131,7 +131,7 @@ class EasyShoppingAdvancedSecond(MycroftSkill):
         self.img_hand = ''
         self.detail = ''
         self.first_api_call_return = ''
-        self.log.info(LOGSTR + "_init_ EasyShoppingSkillEnhanced1")
+        self.log.info(LOGSTR + "_init_ EasyShoppingSkillEnhanced2")
 
     def initialize(self):
         self.reload_skill = False
@@ -331,6 +331,8 @@ class EasyShoppingAdvancedSecond(MycroftSkill):
         if self.img_hand != '':
             self.speak('Don\'t put it into cart. Let\'s continue shopping!')
             self.clear_all()
+        else:
+            self.speak('Sorry, I don\'t understand')
 
     @intent_handler('take.item.intent')
     @removes_context('getDetailContext')
@@ -339,6 +341,8 @@ class EasyShoppingAdvancedSecond(MycroftSkill):
             write_to_csv(self.detail)
             self.speak('I will put the item into cart. Let\'s continue shopping!')
             self.clear_all()
+        else:
+            self.speak('Sorry, I don\'t understand')
     
     @intent_handler(IntentBuilder('NoContext').one_of('Category', 'Color', 'Brand', 'Kw', 'Info'))
     def handle_no_context2(self, message):
