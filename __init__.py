@@ -22,9 +22,9 @@ MODE = 'TEST'
 # need to be changed
 IMAGE_STORE_PATH = '/opt/mycroft/skills/easy-shopping-advanced-second-skill/photo/'
 # need to be changed
-TEST_IMAGE_PATH_MULTI = '/opt/mycroft/skills/sandbox-git-skill.yuyang0828/photo/multi.jpeg'
+TEST_IMAGE_PATH_MULTI = 'testPhoto/multi.jpeg'
 # need to be changed
-TEST_IMAGE_PATH_HAND = '/opt/mycroft/skills/sandbox-git-skill.yuyang0828/photo/2.jpeg'
+TEST_IMAGE_PATH_HAND = 'testPhoto/2.jpeg'
 
 #========================= new params and functions for case 3 ==============================
 

@@ -5,12 +5,13 @@ import time
 import cv2
 import sys
 
-from .util import callAPI, encode_image_from_file
-
-MYCROFT_VERSION = True
-TEST_IMAGE_PATH = '/opt/mycroft/skills/sandbox-git-skill.yuyang0828/photo/1.jpeg'
+MYCROFT_VERSION = False
+TEST_IMAGE_PATH = '/opt/mycroft/skills/easy-shopping-advanced-second-skill/testPhoto/1.jpeg'
 if MYCROFT_VERSION:
+    from .util import callAPI, encode_image_from_file
     from mycroft.util import LOG
+else:
+    from util import callAPI, encode_image_from_file
     
 def getObjectsThenLabel(image_file):
 
